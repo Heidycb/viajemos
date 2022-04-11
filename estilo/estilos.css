@@ -28,8 +28,8 @@ body {
 
 
 .menu {
-    background-color: tomato;
-    color: black;
+    background-image: linear-gradient(to right, #530404,#c10404);
+    color: white;
     width: 100%;
     text-align: right;
     padding: 0px 10px;
@@ -39,7 +39,7 @@ body {
 .menu li {
     display: inline-block;
     position: relative;
-    color: black;
+    color: white;
     list-style-type: none;
     /*Oculta la sublista*/
     padding: 10px;
@@ -50,7 +50,7 @@ body {
 .menu li a {
     text-decoration: none;
     /*Oculta las lineas de la lista*/
-    color: black;
+    color: white;
 }
 
 .submenu {
@@ -66,7 +66,7 @@ body {
 }
 
 .menu li:hover {
-    background-color: #EBF5FB;
+    background-color: black;
 }
 
 .menu li:hover .submenu {
@@ -94,6 +94,7 @@ body {
     font-size: 30px;
     padding: 30px;
     background-color: #FDFEFE;
+    color: #E74C3C;
 }
 
 
@@ -111,12 +112,23 @@ body {
     /*ancho*/
     height: 200px;
     /*alto*/
-    border-radius: 0%;
+    border-radius: 50%;
     /*Aplica bordes a la img*/
     object-fit: cover;
     /*Centrar la img*/
     /*display: flex;*/
     padding-bottom: 2px;
+    animation-name: un_efecto;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes un_efecto{
+    0%{transform: translateX(18px);}
+    25%{transform: translateX(15px);}
+    50%{transform: translateX(18px);}
+    100%{transform: translateX(0px);}
 }
 
 .info p {
@@ -163,6 +175,13 @@ grid-area: agencias;
     width: 200px;
     height: 150px;
     padding-bottom: 10px; 
+    filter: grayscale(100%);
+    transition: all 1s;
+}
+
+.galeria img:hover {
+    filter:none;
+    transform: rotate(360deg);
 }
 
 /*-----------COSTA----------------*/
@@ -249,9 +268,9 @@ textarea {
 /*------------FOOTER---------*/
 .footer {
    /* margin-top: 40px;*/
-    background-color: tomato;
+   background-image: linear-gradient(to right, #530404,#c10404);
     padding: 10px;
-    color: black;
+    color:white;
     text-align: center;
     bottom: 0;
     width: 100%;
