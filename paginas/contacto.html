@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link para el Logo-->
+    <link rel="shortcut icon" href="../mult/lupa.png" type="image/x-icon">
+    <!--Link de CSS-->
+    <link rel="stylesheet" href="../estilo/estilos.css">
+
+    <title>Viajemos</title>
+</head>
+
+<body>
+
+    <h1 class="cabecera">Viajemos juntos por el Peru</h1>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Inicio</a> </li>
+            <li><a href="#">Destinos</a>
+                <ul class="submenu">
+                    <li><a href="costa.html">Costa</a> </li>
+                    <li><a href="sierra.html">Sierra</a> </li>
+                    <li><a href="selva.html">Selva</a> </li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a> </li>
+        </ul>
+    </nav>
+
+    <div class="subtitulo">
+        <h3>Contacto</h3>
+    </div>
+
+    <div class="contac">
+        <div class="contac__titulo">
+            <h3>Datos de registro</h3>
+        </div>
+        <div class="contac__p">
+            <p>Si deseas recibir boletines, datos y recomendaciones acerca de viajes, registrate: </p>
+        </div>
+
+        <div>
+            <form class="formulario">
+                <!--Formulario-->
+                <!--Datos de resgitro-->
+                <label for="nombre">Nombre:</label>
+                <input type="text" placeholder="Ingrese su nombre" name="nombre ">
+
+                <br>
+
+                <label for="correo">Correo:</label>
+                <input type="email" placeholder="Ingrese su email" name="correo">
+
+                <br>
+
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" placeholder="Ingrese su contraseña" name="contraseña">
+
+                <br>
+                <label for="Comentario">Comentario</label>
+                <textarea name="mensaje" placeholder="Ingrese comentario"></textarea>
+
+
+                <!--
+                <br>
+                <label for="">Ingrese su genero</label>
+                <input type="radio" value="fem" name="genero">Femenino
+                <input type="radio" value="mas" name="genero">Masculino
+                <input type="radio" value="pnd" name="genero">Prefiero no decirlo
+
+                <br>
+
+                <input type="checkbox" value="1"> Acepta los terminos y condiciones
+                <input type="checkbox" value="2"> Acepta envio de email
+
+                <br>
+                 Botones -->
+                <!-- Boton enviar -->
+                <input type="submit" value="Envia el formulario">
+                <!-- Boton resetear -->
+                <input type="reset" value="Reiniciar">
+                <!-- Boton que no hace nada, pero sirve para Js -->
+                <!--<input type="button" value="No sirve_JS">-->
+
+
+            </form>
+        </div>
+    </div>
+
+    <!--<div class="contac__img">
+        <img src="../Mult/Mochila_contacto.png" alt="">
+    </div>
+-->
+
+    <footer class="footer">
+        <div>
+            Derechos Reservados| Heidy Cabrera ©Copyright
+        </div>
+    </footer>
+
+</body>
+
+</html>

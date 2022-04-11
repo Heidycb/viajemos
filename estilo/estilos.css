@@ -1,0 +1,420 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62, 5%;
+    /*funciona como una unidad de medidad para el formato de la lestras y se asignan: 2rem, 3 rem, .. */
+}
+
+body {
+    font-family: 'Signika Negative', sans-serif;
+    background-color: #ECF0F1;
+}
+
+/*-----Cabecera-----------*/
+.cabecera{
+    background-image: url(../mult/portada.png);
+    background-position: top;
+    padding: 50px 10px;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 60px;
+    grid-area: titulo;
+}
+
+
+.menu {
+    background-color: tomato;
+    color: black;
+    width: 100%;
+    text-align: right;
+    padding: 0px 10px;
+    grid-area: nav;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    color: black;
+    list-style-type: none;
+    /*Oculta la sublista*/
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    /*Oculta las lineas de la lista*/
+    color: black;
+}
+
+.submenu {
+    display: none;
+    /* para que se oculte la sublista*/
+    position: absolute;
+}
+
+.submenu li {
+    display: block;
+    /* Para que se comporte como un elemto de bloque*/
+    background-image: linear-gradient(to right, #530404,#c10404);
+}
+
+.menu li:hover {
+    background-color: #EBF5FB;
+}
+
+.menu li:hover .submenu {
+    display: block;
+    /* Brinda el bloque para el sublistado*/
+    background-color: black;
+}
+
+.subtitulo {
+    color: tomato;
+    padding: 30px;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+
+}
+
+/*-------------INDEX------------------------------*/
+.nosotros{
+    grid-area: nosotros;
+}
+.nosotros h3{
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    background-color: #FDFEFE;
+}
+
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+
+}
+
+.info_img {
+    /* margin-top: 10px;*/
+    width: 200px;
+    /*ancho*/
+    height: 200px;
+    /*alto*/
+    border-radius: 0%;
+    /*Aplica bordes a la img*/
+    object-fit: cover;
+    /*Centrar la img*/
+    /*display: flex;*/
+    padding-bottom: 2px;
+}
+
+.info p {
+    padding: 0 30px;
+    width: 600px;
+}
+
+/*-------Lista de agencias-----*/
+.agencias{
+background-color: #F6DDCC ;
+grid-area: agencias;
+}
+.agencias h3 {
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    
+}
+
+.agencias__lista {
+    display: flex;
+    text-align: center;
+}
+
+.agencias_lista li {
+    text-align: center;
+    list-style-type: none;
+}
+
+.lista__p {
+    text-align: center;
+    padding: 30px;
+}
+
+/*Galeria*/
+.galeria{
+    background-color: #EBF5FB  ;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    grid-area: galeria;
+}
+.galeria img{
+    width: 200px;
+    height: 150px;
+    padding-bottom: 10px; 
+}
+
+/*-----------COSTA----------------*/
+.costa__contenido {
+    text-align: center;
+    padding: 1%;
+    font-size: 30px;
+    grid-area: costa;
+}
+.costa__contenido li{
+    list-style-type: none;
+}
+
+/*-----------SIERRA--------------*/
+.sierra__contenido {
+    text-align: center;
+    padding: 1%;
+    font-size: 30px;
+    grid-area: sierra;
+}
+
+.sierra__contenido li {
+    list-style-type: none;
+    /*Oculta la sublista*/
+
+}
+
+/*--------------SELVA----------------*/
+.selva__contenido {
+    text-align: center;
+    padding: 1%;
+    font-size: 30px;
+    grid-area: selva;
+}
+.selva__contenido li{
+    list-style-type: none;
+}
+
+/*-----------CONTACTO---------*/
+.contac {
+    padding: 5px 10%;
+    text-align: center;
+
+
+}
+
+.formulario {
+    margin: auto;
+    background-attachment: fixed;
+    background-color: #E74C3C;
+    box-sizing: border-box;
+    border-radius: 7px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+
+textarea {
+    min-height: 100px;
+    min-width: 200px;
+}
+
+.contac__img {
+    margin-top: 10px;
+    width: 50px;
+    /*ancho*/
+    height: 50px;
+    /*alto*/
+    border-radius: 80%;
+    /*Aplica bordes a la img*/
+    object-fit: cover;
+    /*Centrar la img*/
+    display: flex;
+}
+
+/*------------FOOTER---------*/
+.footer {
+   /* margin-top: 40px;*/
+    background-color: tomato;
+    padding: 10px;
+    color: black;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    grid-area:footer;
+}
+
+/*-----Grid INDEX------------*/
+.padre {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 0.1fr 0.05fr 1fr 0.5fr 0.1fr;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "nav nav nav nav"
+    "nosotros nosotros nosotros nosotros"
+    "galeria galeria agencias agencias"
+    "footer footer footer footer"
+    ;
+}
+
+/*-----Grid SIERRA------------*/
+.padredos{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 0.1fr 0.05fr 0.5fr 0.5fr 0.1fr;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "nav nav nav nav"
+    "subtitulo subtitulo subtitulo subtitulo"
+    "sierra sierra video video"
+    "footer footer footer footer"
+    ;
+}
+.cabecera{
+    grid-area: titulo;
+}
+.menu{
+    grid-area: nav;
+}
+
+.footer{
+    grid-area:footer;
+}
+.subtitulo{
+    grid-area: subtitulo;
+}
+.sierra__contenido{
+    grid-area: sierra;
+}
+.video{
+    grid-area: video;
+}
+/*-----Grid SELVA------------*/
+.padretres{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 0.1fr 0.05fr 0.5fr 0.5fr 0.1fr;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "nav nav nav nav"
+    "subtitulo subtitulo subtitulo subtitulo"
+    "selva selva video video"
+    "footer footer footer footer"
+    ;
+}
+.cabecera{
+    grid-area: titulo;
+}
+.menu{
+    grid-area: nav;
+}
+
+.footer{
+    grid-area:footer;
+}
+.subtitulo{
+    grid-area: subtitulo;
+}
+.selva__contenido{
+    grid-area: selva;
+}
+.video{
+    grid-area: video;
+}
+/*-----Grid COSTA------------*/
+.padrecuatro{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 0.1fr 0.05fr 0.5fr 0.5fr 0.1fr;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "nav nav nav nav"
+    "subtitulo subtitulo subtitulo subtitulo"
+    "costa costa video video"
+    "footer footer footer footer"
+    ;
+}
+.cabecera{
+    grid-area: titulo;
+}
+.menu{
+    grid-area: nav;
+}
+
+.footer{
+    grid-area:footer;
+}
+.subtitulo{
+    grid-area: subtitulo;
+}
+.costa__contenido{
+    grid-area: costa;
+}
+.video{
+    grid-area: video;
+}
+
+@media screen and (max-width:500px) {
+    
+    .padre{
+        grid-template-columns: 1fr;
+        grid-template-rows: (6, 1fr);
+        grid-template-areas: 
+        "titulo"
+        "nav"
+        "nosotros"
+        "galeria"
+        "agencias"
+        "footer";
+    }
+    .padredos{
+        grid-template-columns: 1fr;
+        grid-template-rows: (6, 1fr);
+        grid-template-areas: 
+        "titulo"
+        "nav"
+        "subtitulo"
+        "sierra"
+        "video"
+        "footer";
+    }
+    .padretres{
+        grid-template-columns: 1fr;
+        grid-template-rows: (6, 1fr);
+        grid-template-areas: 
+        "titulo"
+        "nav"
+        "subtitulo"
+        "selva"
+        "video"
+        "footer";
+
+    }
+    .padrecuatro{
+        grid-template-columns: 1fr;
+        grid-template-rows: (6, 1fr);
+        grid-template-areas: 
+        "titulo"
+        "nav"
+        "subtitulo"
+        "costa"
+        "video"
+        "footer";
+
+    }
+}
